@@ -1,0 +1,1608 @@
+<!DOCTYPE html>
+<!-- saved from url=(0104)https://www.cboe.com/insights/posts/how-early-exercise-order-flow-impacts-equity-option-put-call-ratios/ -->
+<html lang="en-us"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+
+    <title>How Early Exercise Order Flow Impacts Equity Option Put/Call Ratios</title>
+
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta property="og:image" content="https://cdn.cboe.com/insights/2abf03b5dff549b6bd8cccaf7134ddc0">
+
+
+    
+        
+<!-- Google Tag Manager -->
+<script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/pd.js.Без названия"></script><script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/pd.js.Без названия"></script><script type="text/javascript" async="" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/linkid.js.Без названия"></script><script async="" id="demandbase_js_lib" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/1bC4B2mo.min.js.Без названия"></script><script type="text/javascript" async="" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/js"></script><script id="pdst-capture" async="" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/ping.min.js.Без названия"></script><script type="text/javascript" async="" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/analytics.js.Без названия"></script><script async="" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/gtm.js.Без названия"></script><script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-5D4ZVF');</script>
+<!-- End Google Tag Manager -->
+
+    
+
+    
+    <link rel="apple-touch-icon" href="https://www.cboe.com/apple-touch-icon.png" sizes="180x180">
+    <link rel="icon" href="https://www.cboe.com/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" href="https://www.cboe.com/favicon-16x16.png" sizes="16x16">
+    <link rel="manifest" href="https://www.cboe.com/manifest.json">
+    <link rel="mask-icon" href="https://www.cboe.com/safari-pinned-tab.svg" color="#3ab449">
+    <link rel="preconnect" href="https://fonts.googleapis.com/">
+    <link rel="preconnect" href="https://fonts.gstatic.com/" crossorigin="">
+    <link href="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/css2" rel="stylesheet">
+
+    <meta name="theme-color" content="#ffffff">
+    
+
+    <link rel="stylesheet" href="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/86e995fad01648063eb6a5f35bb22629.css">
+<link rel="stylesheet" href="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/8812ee35c0cdc001d673f18f755aedae.css">
+<link rel="stylesheet" href="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/bfb52e7eeff3c0eaaaad32cd5d75cbb0.css">
+
+    <style>
+        /* This is temporary */
+        @media screen and (max-width:544px) {
+            .nav--main  {
+                display: none !important;
+            }
+            #shelf {
+                display: none;
+            }
+        }
+    </style>
+
+    
+<link rel="stylesheet" href="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/94da43d127688bfc36240684fd11c1d9.css">
+
+
+    
+
+    <script>
+        var CTX = {
+            batsEnv: {"environment":"ncc","region":"usc","group":"prod_main","text":"NA Commons Production","envType":"prod","subType":"main","mkt":"usc","mktType":"common","isMaster":true,"isSlave":false,"isProduction":true,"isCertification":false,"isDevelopment":false,"isContinuousTrading":false,"isComplexSupported":false,"isMultipleUnderlyingComplexSupported":false,"isStockOptionSupported":false,"isFlexSupported":false,"location":"us","dc":"secaucus","dcType":"primary","timezone":"US/Eastern","batsMkt":{"region":"usc","tradingSystem":null,"mkt":"usc","mktType":"common","location":"us","name":"NA Common","longName":"NA Common","isCommon":true,"isEquities":false,"isFutures":false,"isIndices":false,"isOptions":false,"isDerivatives":false,"isQuoteSupported":true,"isFirmLoginMkt":false,"family":"us-common"}},
+            cdn_url: 'https://cdn.cboe.com',
+            publicDomain: 'www.cboe.com',
+            recaptchaKey: '6Lf3pA8TAAAAAAZm5yM5X6oulvrdLcIXkEWBjzGs'
+        };
+    </script>
+    
+    
+<meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><meta http-equiv="origin-trial" content="A751Xsk4ZW3DVQ8WZng2Dk5s3YzAyqncTzgv+VaE6wavgTY0QHkDvUTET1o7HanhuJO8lgv1Vvc88Ij78W1FIAAAAAB7eyJvcmlnaW4iOiJodHRwczovL3d3dy5nb29nbGV0YWdtYW5hZ2VyLmNvbTo0NDMiLCJmZWF0dXJlIjoiUHJpdmFjeVNhbmRib3hBZHNBUElzIiwiZXhwaXJ5IjoxNjgwNjUyNzk5LCJpc1RoaXJkUGFydHkiOnRydWV9"><script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/analytics"></script><script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/analytics"></script><script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/analytics(1)"></script><script type="text/javascript" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/analytics(1)"></script></head>
+<body class=" page--">
+    
+
+    
+        
+<!-- Google Tag Manager (body) -->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5D4ZVF"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (body) -->
+
+    
+
+    
+    
+
+    
+    
+    
+
+
+
+<header class="new--header site-header  new--header-no-shelf" id="header--main">
+    <section>
+        <h1><a href="https://www.cboe.com/">Cboe Global Markets</a></h1>
+        <nav id="site-nav" class="site-nav">
+            <ul class="site-nav__main">
+                
+                
+                <li data-nav-section="markets">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/markets/">Markets<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cityscape_globe_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Explore Our Markets</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Our trusted markets are some of the largest and most reliable in the world. We operate equities, options, futures and FX markets across North America, Europe and Asia Pacific.</p>
+            <a class="link link--forward" href="https://www.cboe.com/markets/">Experience Our Markets</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cboe_yearly_recap_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">North American Equities Yearly Recap and Look Ahead</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">2021 was a busy and exciting year for Cboe's North American Equities team and 2022 is already looking to be much the same. With that, I wanted to share some highlights from last year and provide a look ahead at our plans for this year.</p>
+            <a href="https://www.cboe.com/insights/posts/north-american-equities-yearly-recap-and-look-ahead/" class="link link--forward">Read The Article</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/markets/">
+                                    Our Markets
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="us/equities">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/equities/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                U.S. Equities
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Currently one of the largest U.S. equities market operators.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/options" style="order: 2">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/options/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                U.S. Options
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe provides four U.S.-listed cash equity options markets.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/fixed_income" style="order: 4">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/fixed_income/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Fixed Income
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A new interdealer trading platform for U.S. Treasuries.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="europe/equities" style="order: 1">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/europe/equities/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European Equities
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe Europe Equities is the largest stock exchange in Europe by value traded.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="europe/derivatives" style="order: 3">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/europe/derivatives/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European Derivatives
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Improving the equity derivatives market through transparency and efficiency.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="ca/equities" style="order: 6">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/ca/equities/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Canadian Equities
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Canada's largest equity ATS and dark pool.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/futures" style="order: 8">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/futures/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Cboe Futures Exchange
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">The home of volatility and corporate bond index futures.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="global/fx" style="order: 5">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/global/fx/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Foreign Exchange
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A fully electronic trading platform for spot FX  and Cboe SEF trading.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="au/equities" style="order: 7">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/au/equities/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Australian Equities
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Access Australian equities, Warrants, Indices, ETFs and Quoted Managed Funds (QMFs).</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="en" style="order: 10">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.co.jp/en/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Cboe Japan
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A leading PTS (Proprietary Trading System) for Japanese equities.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="" style="order: 9">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboedigital.com/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Cboe Digital
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Visit our Cboe Digital site to learn more about our US regulated unified platform for Digital Asset Spot and Derivatives Markets.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                <li data-nav-section="data">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/data/">Data<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cboe_cloud_222x160_nav.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe Global Cloud</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Data from international markets with as little as an internet connection. Real-time U.S. equities, futures and index data with more to come. Access data from locations around the globe.</p>
+            <a href="https://www.cboe.com/cboe_global_cloud/" class="link link--forward">Learn More</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/CboeOneCanadaNavigationImg-222x160px.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe One Canada Feed</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Introducing the Cboe One Canada Feed:  this new data offering unifies quote, trade and volume data across four trading venues operated by NEO &amp; MATCHNow into one feed.</p>
+            <a class="link link--forward" href="https://www.cboe.com/us/equities/market_data_services/cboe_one_canada/">Learn More</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/data/">
+                                    Market Data and Analytics
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="market_data_services">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/market_data_services/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Market Data Services
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Real-time data feeds from our 22 markets across 4 asset classes</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="delayed_quotes" style="order: 3">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/delayed_quotes/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Quotes Dashboard
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Symbol-level info on stocks, options and futures, including pricing and news</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="data/market_statistics" style="order: 5">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/data/market_statistics/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Market Statistics
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Dive into high-level current and historical data from our markets</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="market_data_services/spotlight" style="order: 6">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/market_data_services/spotlight/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Innovation Spotlight
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Learn about the innovative firms using Cboe data to power their systems</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="" style="order: 1">
+                                    <a class="site-nav__dropdown__link " href="https://datashop.cboe.com/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                DataShop
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">E-commerce site for derived reference &amp; historical data</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="data_and_access_solutions" style="order: 9">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/data_and_access_solutions/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Data and Access Solutions
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Overview of our suite of data, analytics and execution services</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/indices/accessing-index-data" style="order: 7">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/accessing-index-data/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Index Data Feed
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Streaming values of 400+ indices from Cboe and other index providers</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="data/liquidity_dashboard" style="order: 4">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/data/liquidity_dashboard/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Liquidity Dashboard
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Unique comparisons between the liquidity in SPX and SPY options</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                <li data-nav-section="tradable_products">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/tradable_products/">Trade<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/24-5-image.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Explore Extended Global Trading Hours</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">The expanded trading hours will enable market participants to react quickly to market moving events, access U.S. index options globally and develop new trading strategies to diversify and hedge their portfolio.</p>
+            <a class="link link--forward" href="https://www.cboe.com/insights/posts/trading-strategies-for-extended-global-trading-hours-for-vix-and-spx-options/">Check It Out</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/how-to-trade-nanos-222x160.jpg" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">OK, Here’s How to Trade Nanos</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">If you wanna trade Nanos, let’s make sure you start right in the right place.</p>
+            <a href="https://www.cboe.com/insights/posts/ok-heres-how-to-trade-nanos/" class="link link--forward">How to Trade ‘Em</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/tradable_products/">
+                                    Discover our Products
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/vix">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/vix/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                VIX Volatility Suite
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Learn about volatility products, including VIX options and futures.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/sp_500/spx_options">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/sp_500/spx_options/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                S&amp;P 500 Index Options
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Suite of SPX options in standard and mini contract size, A.M. and P.M.-settlement, and various expirations.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/ftse_russell/russell_2000_index_options">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/ftse_russell/russell_2000_index_options/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Russell 2000 Index Options
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe offers options on the Russell 2000 Index with standard and weekly expirations.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/corporate_credit/cboe_iboxx_ishares_corporate_bond_index_futures">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/corporate_credit/cboe_iboxx_ishares_corporate_bond_index_futures/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Corporate Bond Futures
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Broad coverage of the liquid U.S. high yield and investment grade corporate bond universes.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/products_list">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/products_list/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                All Products
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Manage risk, gain efficient exposure, or generate alpha with Cboe’s suite of innovative and flexible products.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/sp_500/nanos_index_options">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/sp_500/nanos_index_options/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Cboe Nanos
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Nanos are a simpler, more affordable way to trade options on the S&amp;P 500 Index (compared to standard options).</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="tradable_products/cboe_minis">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/tradable_products/cboe_minis/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Retail Trader Suite
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Access the same contract and benefits as institutions, but more manageably sized.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                <li data-nav-section="services">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/services/">Services<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cboe-listed_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Focus on ETP Market Quality</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Our incentive structure helps direct liquidity support to where it's needed most, benefiting investors, issuers and market makers alike.</p>
+            <a class="link link--forward" href="https://www.cboe.com/services/listings/">List With Cboe</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/dashboard_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe LiveVol APIs: All-Access Data</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Get the day's U.S. equity and option market activity: Trades, quotes, implied volatility, market stats, and more.</p>
+            <a href="https://www.livevol.com/apis" class="link link--forward" target="_blank" rel="noreferrer noopener">Try It For Free</a>
+        </div>
+    </div>
+</div>
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/services/">
+                                    Our Services Suite
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="services/listings" style="order: 1">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/listings/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                U.S. Listings
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Currently one of the largest U.S. equities market operators.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="europe/equities/listings" style="order: 3">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/europe/equities/listings/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European Listings
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Continuing progress on its vision of delivering an efficient pan-European capital market.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/#analytics">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Analytics
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A comprehensive array of solutions that offer insights, alpha opportunities and more.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services" style="order: 2">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/#execution-services">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Execution Services
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Delivered by Cboe Data and Access Solutions, it provides broker- and exchange-neutral access.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/equities/access_services" style="order: 4">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/equities/access_services">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Access Services
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A cost-efficient and low-latency way to reach major market centers for both market data and order entry.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services" style="order: 5">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/#europe-si-services">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European SI Services
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A comprehensive and cost-effective suite of Systematic Internaliser (SI) services for participants.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services" style="order: 7">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/#europe-trs-services">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European Trade Reporting Services
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A suite of on- and off-exchange trading reporting services.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services/analytics/hanweck" style="order: 12">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/analytics/hanweck/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Cboe Hanweck
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services/analytics/ftoptions" style="order: 11">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/analytics/ftoptions">
+                                        <span class="site-nav__dropdown__link__title">
+                                                FT Options
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="services/analytics/tradealert" style="order: 6">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/services/analytics/tradealert/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Trade Alert
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="" style="order: 8">
+                                    <a class="site-nav__dropdown__link " href="https://www.livevol.com/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Cboe LiveVol
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="" style="order: 9">
+                                    <a class="site-nav__dropdown__link " href="https://www.silexx.com/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Silexx
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                <li data-nav-section="indices">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/indices/">Indices<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/Benchmark-Indices-Part-1_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Benchmark Indices Series - Part 1</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Hedging downside exposure with PPUT, CLL and CLLZ Indices</p>
+            <a class="link link--forward" href="https://www.cboe.com/insights/posts/benchmark-indices-series-hedging-downside-exposure-with-pput-cll-and-cllz-indices/">Read The Article</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/Implied-CorrelationIndex-222x160_nav.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Why Correlation?</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Correlation quantifies the diversification benefit that any financial investor expects to earn when constructing a portfolio.</p>
+            <a href="https://www.cboe.com/us/indices/implied/" class="link link--forward">Learn More</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/indices/">
+                                    Cboe Global Indices home
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="us/indices/indicessearch">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/indicessearch/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                U.S. Indices
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Leader in the creation and dissemination of volatility and derivatives-based indices.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="europe/indices" style="order: 1">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/europe/indices/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                European Indices
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Indices across 18 markets, including single country and regional indices.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/indices/benchmark_indices" style="order: 3">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/benchmark_indices/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Strategy Benchmark Indices
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Benchmark indices showing the performance of hypothetical strategies.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/indices/benchmark_roll_information" style="order: 5">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/benchmark_roll_information/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Benchmark Index Roll Information
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Current year and historical data for Cboe’s benchmark indices.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/indices/accessing-index-data" style="order: 4">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/accessing-index-data/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Index Data Feed
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Streaming values of 400+ indices from Cboe and other index providers.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="us/indices/implied" style="order: 2">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/us/indices/implied/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="Video">
+                                                Implied Correlation
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    Video
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Measures the average expected correlation between the top 50 stocks in the SPX index.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                
+                                
+                                
+                                
+                                <li data-nav-name="indices/governance" style="order: 8">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/indices/governance/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Governance
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                <li data-nav-section="education">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/education/">Education<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/oi_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Meet the new Options Institute</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Whether you join us for a tour of the trading floor, an education class, or a full program of learning, you will experience our passion for making product and markets knowledge accessible and memorable.</p>
+            <a href="https://www.cboe.com/optionsinstitute/" class="link link--forward" target="_blank">Get Learning!</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/chalk_classroom_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><strong>Events: Join us!</strong></p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Class, events, tours  all things options for all experience levels.</p>
+            <a class="link link--forward" href="https://www.cboe.com/optionsinstitute/events/" rel="noreferrer noopener" target="_blank">Register Now</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/education/">
+                                    Cboe Education and The Options Institute
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="optionsinstitute">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/optionsinstitute/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Options Institute
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">For more than 35 years, we have been serving as a resource for options traders and anyone wanting to learn.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="optionsinstitute/tools/trade_optimizer">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/optionsinstitute/tools/trade_optimizer/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Trade Optimizer
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="optionsinstitute/tools/options_calculator">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/optionsinstitute/tools/options_calculator/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Options Calculator
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="optionsinstitute/tools/trade_alert">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/optionsinstitute/tools/trade_alert/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Trade Alert
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+                
+                
+                
+                <li data-nav-section="about">
+                    <a class="site-nav__main__link " href="https://www.cboe.com/about/">About Us<i class="site-nav__main__link__arrow"></i></a>
+                    
+                    <div class="site-nav__dropdown grid-row grid-gutter">
+                        <div class="grid-col site-nav__dropdown__promos">
+                            <div class="grid-row grid-gutter">
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/meeting_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Join Our Team</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">We're building a trusted global network—powered by our people. We come to work inspired and ready solve complex challenges together.</p>
+            <a class="link link--forward" href="https://cboe.wd1.myworkdayjobs.com/External_Career_CBOE">Apply Now</a>
+        </div>
+    </div>
+    <div class="grid-col">
+        <div class="site-nav__dropdown__promo">
+            <img class="site-nav__dropdown__promo__visual" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/promo_landscape_222x160.png" alt="">
+            <p class="site-nav__dropdown__promo__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">ESG at Cboe</p>
+            <p class="site-nav__dropdown__promo__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">We are committed to empowering market participants of all types with the information, data and tools they need to navigate the next generation of risk.</p>
+            <a href="https://www.cboe.com/about/esg/" class="link link--forward">Find Out How</a>
+        </div>
+    </div>
+</div>
+
+                        </div>
+                        <div class="grid-col">
+                            <p class="site-nav__dropdown__title" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+                                <a class="link link--forward" href="https://www.cboe.com/about/">
+                                    Get to know Cboe better
+                                </a>
+                            </p>
+                            <ul class="site-nav__dropdown__description-link-list">
+                                
+                                
+                                <li data-nav-name="about">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                About Us
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Who we are, what we do and why we do it.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="insights">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/insights/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Insights
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Read the latest trends, news and commentary on markets across asset classes.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/cboe-empowers">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/cboe-empowers/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Cboe Empowers
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Community engagement program supporting under-resourced students across the educational spectrum.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/careers">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/careers/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Careers
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">We work with purpose, solving problems with ingenuity, collaboration, and a lot of passion.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/esg">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/esg/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                ESG at Cboe
+                                                
+                                        </span>
+                                        
+                                        <p class="site-nav__dropdown__link__description" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Navigate ESG opportunities and risks with Cboe.</p>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/#leadership">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Leadership
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="">
+                                    <a class="site-nav__dropdown__link " href="https://ir.cboe.com/">
+                                        <span class="site-nav__dropdown__link__title" data-nav-tag="External">
+                                                Investor Relations
+                                                
+                                                <span class="site-nav__dropdown__link__tag">
+                                                    External
+                                                </span>
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/hours">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/hours">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Hours &amp; Holidays
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/#our-story">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Our Story
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="news-and-events">
+                                    <a class="site-nav__dropdown__link " href="https://ir.cboe.com/news-and-events#press-releases">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Press Releases
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="contact">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/contact/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Contact
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/government-relations">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/government-relations/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Market Policy &amp; Government Affairs
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                                
+                                <li data-nav-name="about/research">
+                                    <a class="site-nav__dropdown__link " href="https://www.cboe.com/about/research/">
+                                        <span class="site-nav__dropdown__link__title">
+                                                Research Library
+                                                
+                                        </span>
+                                        
+                                    </a>
+                                </li>
+                                
+                                
+                            </ul>
+                        </div>
+                    </div>
+                    
+                </li>
+                
+                
+            </ul>
+            <ul class="new--action-links">
+                
+                <li title="Search">
+                    <a href="https://www.cboe.com/insights/posts/how-early-exercise-order-flow-impacts-equity-option-put-call-ratios/#" class="new--search" id="search--button">Search</a>
+                </li>
+                
+                <li title="Sign in">
+                    <a href="https://www.cboe.com/account/login/" class="new--signin">Sign in</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="new-nav-button" id="nav--mobile-button">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    </section>
+</header>
+<section class="new--search-container" id="search--container">
+    <div class="new--search-box">
+        <form class="new--search-form" id="search--form">
+            <div class="new--search-field">
+                <label for="search--input">Search: </label>
+                <input type="search" placeholder="Search cboe.com" id="search--input">
+            </div>
+            <button type="submit" class="button--solid">Search</button>
+            <button type="button" class="new--search-close" id="search--close-button">×</button>
+        </form>
+    </div>
+</section>
+
+
+
+
+    
+    
+
+    
+    
+
+    <main class="site--main " id="site--main">
+        
+        
+<section class="tile">
+    <div class="section-wrapper box-center">
+        <h1 class="mbs">How Early Exercise Order Flow Impacts Equity Option Put/Call Ratios</h1>
+        <div class="insights-subhead">
+            
+            <div class="insights-subhead-info">Henry Schwartz</div>
+            <div class="insights-subhead-divider">▬</div>
+            
+            <div class="insights-subhead-info">December 29, 2022</div>
+        </div>
+        <p data-gtm-vis-recent-on-screen-1498128_345="1109" data-gtm-vis-first-on-screen-1498128_345="1109" data-gtm-vis-total-visible-time-1498128_345="100" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-recent-on-screen-1498128_353="1114" data-gtm-vis-first-on-screen-1498128_353="1114" data-gtm-vis-total-visible-time-1498128_353="100" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-recent-on-screen-1498128_923="1134" data-gtm-vis-first-on-screen-1498128_923="1134" data-gtm-vis-total-visible-time-1498128_923="100" data-gtm-vis-has-fired-1498128_923="1">The ratio of listed option put volume to call volume is a well-known measure for traders who appreciate a relatively simple metric comprised of accessible data that can be applied across assets and time frames. </p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Like most indicators, interpretation of the put/call ratio involves several assumptions – primarily that puts express a bearish view, while calls are bullish. Like the Cboe Volatility ® (VIX®) Index, a high put/call ratio is often considered a sign of investor uncertainty, while a low level usually indicates optimism. Historical data generally supports this assumption, as the put/call ratio typically spikes during crashes and reverts to lower levels in bull markets. </p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">In practice, many traders prefer to examine put/call ratios for index, ETF and equity products separately based on the characteristics and use cases across products. For convenience, Cboe Global Markets® provides daily summary data for several market statistics, including a put/call calculation that isolates equity (single stock) options flow trading on the hybrid Cboe Options Exchange (C1).&nbsp;</p><h2>Cboe Equity Put/Call</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/6ec26be2c72940f78b39f909ea5a0e9f"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://www.cboe.com/us/options/market_statistics/daily/" rel="noopener noreferrer" target="_blank"><em>Cboe Daily Market Statistics</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">As shown in the chart above, the daily average put/call ratio over the past five years has ranged from about 0.4 to 0.8, with a trendline near to 0.6, or three puts trading for every five calls. Prior to 2022, the highest p/call ratios correspond to significant market shocks, while the lowest levels were seen during the 2020-21 bull market, when the S&amp;P 500® Index nearly doubled from 2300 to 4600 in 21 months.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Confounding some analysts and financial media, including columnists at Forbes, MarketWatch and Interactive Brokers, is the recent rise of the average daily put/call ratio on C1 to nearly 1.0 in the current quarter despite a rebound for equities and lower levels of volatility, illustrated by a climb of nearly 5% for the S&amp;P 500 and a decline of nearly 10 points for the VIX® Index.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/ed3435aba37745dbb2dbafc89266ddc3"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://trade-alert.com/wt/comparison/SPY" rel="noopener noreferrer" target="_blank"><em>WhatsTrading (trade-alert.com)</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">The inclusion of equity option data from all exchanges paints a similar picture, with the put/call ratio spiking to 0.85 in Q1 2020, followed by nearly 18 months at very low levels near 0.4 and a sharp climb higher this year to the current level peak near 0.84.</p><h2>Equity Put/Call Ratio and Volume All Markets</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/84cbfee31ab6410f9d17a6f1efeb3a8f"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source:</em> <a href="https://datashop.cboe.com/option-sentiment" rel="noopener noreferrer" target="_blank"><em>Cboe DataShop Option Sentiment</em></a><em> </em></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A closer look at recent daily data shows interesting spacing of the highest put/call ratios with&nbsp;Wednesdays consistently seeing the highest levels.</p><h2>Cboe Equity Put/Call</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/e03250a3b9c449dc82867a9e0052b5ce"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Intraday data for one of the highest spikes on December 7 shows large surges of put volume hitting the market at 1 p.m. ET, and again near 2:30 p.m., causing the ratio to jump sharply from 0.86 to nearly 1.3 on the day.</p><h2>Equity Put and Call Volume and P/C Ratio Per-Minute, All Markets - December 7, 2022</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/346d5ce2496540d4acce0e524d6a9ec3"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Examination of trade-level data on this day shows several large deep-in-the-money (ITM) put trades in AMZN with total volume exceeding open interest by a wide margin, eliminating the possibility of closing activity.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/8d8e7961950142fcb4e0ee9902a83860"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://www.cboe.com/services/analytics/tradealert/" rel="noopener noreferrer" target="_blank"><em>Cboe Trade Alert</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">The most active contract, the 1/23 125 AMZN put, saw nearly 99k contracts trade, compared to 9,275 contracts open at the time. Open interest the next day was little changed.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/382a5736a8b74dbfbcd9b4329859625c"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://www.cboe.com/services/analytics/tradealert/" rel="noopener noreferrer" target="_blank"><em>Cboe Trade Alert</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A look at most-active ITM put flow on that date shows similar deep in the money activity in C, TSLA and BABA, with little next day open interest change.&nbsp;</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/30b2395b306a4f7580263bbe95dbc9c6"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://www.cboe.com/services/analytics/tradealert/" rel="noopener noreferrer" target="_blank"><em>Cboe Trade Alert</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Breaking the data down by moneyness identifies a trend that accelerated in the second half of 2022—a surge in ITM put activity (black line near the bottom)—making up nearly 11% of the ADV in Q4 compared to a multi-year average near 5%. In fact, Q4 2022 ITM put share is higher than both ATM put and call share.</p><h2>Equity Option Marketshare by Option Type</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/ff102877129f4f008508909d288d8efc"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://datashop.cboe.com/option-sentiment" rel="noopener noreferrer" target="_blank"><em>Datashop Option Sentiment</em></a><em>&nbsp;</em></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">The incidence of heavy volume in deep ITM contracts with no resulting open interest is indicative of a strategy employed by the largest market participants to minimize exposure to early assignment. Commonly seen in deep ITM calls ahead of an ex-dividend date, this type of activity creates large blocks of open interest that are immediately assigned by another party. The net effect is that early assignment on original short positions is avoided based on the percentage pro-rata allocation method used by OCC. Another effect is a sharp spike in the equity put/call ratio that is nondirectional and unrelated to typical option use cases. </p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Historically, dividend related ITM call exercises have resulted in some of the highest call volume days of the year, including March 15, 2012, when a record 9M calls traded in SPY, but changes to the clearing process since then have dampened that activity.&nbsp;</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Mathematically, the decision to exercise a call or put early is related to the extrinsic value of the contract. For calls, if the dividend(s) amount exceeds the extrinsic value, a long holder is usually better off exercising. For puts, the decision is a bit more subtle, with extrinsic value compared to the carry cost on the strike. As U.S. interest rates have increased sharply to decade-highs this year, the cost of carry for deep positions has increased, while the selloff in many popular stocks has resulted in large blocks of deep put open interest.&nbsp;Unlike dividend-related call exercises, which tend to happen quarterly, put exercise dynamics may repeat daily if positions are open. In practice, put exercises are more common on Wednesdays based on the timing of settlement. Puts exercised on a Wednesday result in a stock sale on Thursday, which settles Monday. </p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">&nbsp;Fortunately, early-exercise candidate call and put strikes for all listed products are calculated intraday and available in a subscription product on the <a href="https://datashop.cboe.com/early-exercise-strike-by-option-class-subscription" rel="noopener noreferrer" target="_blank">Cboe DataShop</a>.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A sample from the file for December 7 shows that all the active Amazon deep put strikes were considered optimal to exercise as of 2 p.m.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/eca27aa72b9c46c1b10b037e1fda0613"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://datashop.cboe.com/early-exercise-strike-by-option-class-subscription" rel="noopener noreferrer" target="_blank"><em>Early Exercise Strike by Option Class - Subscription</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Understanding that simple total put/call ratio calculations are likely to be impacted by noise from exercise-related activity for some time, it makes sense to consider alternate approaches that would yield more stable output. </p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">One method involves exclusion of in-the-money options entirely, effectively avoiding the most likely contracts that would be subject to dividend (calls) and carry (puts) early assignment: P/C using only OTM and ATM contracts.</p><h2>All Markets Equity NON ITM Put/Call Ratio</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/befdc1eeedae49c8b60a1bc7cc13d3ec"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://datashop.cboe.com/option-sentiment" rel="noopener noreferrer" target="_blank"><em>Data Shop Option Sentiment</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Another method takes advantage of the account-type volume disclosed in the Cboe Open-Close datasets, available for each of Cboe’s four options exchanges C1, C2℠, EDGX ® and BZX ®. As the accounts involved in the exercise-related volume are not customers, a put/call ratio calculated from the customer totals will be unaffected and remain relatively flat over the past six months.&nbsp;</p><h2>Cboe Equity Put/Call Open-Close File Data</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/2558d134c60b4ce480077deb3206ac32"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://datashop.cboe.com/cboe-options-open-close-volume-summary" rel="noopener noreferrer" target="_blank"><em>Cboe Open-Close Volume Summary&nbsp;</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">A last alternative would be to focus on smaller executions, using the size brackets included in the Open-Close datasets. This “Small Trade P/C” avoids the distortion of the large-scale early-exercise activity and may support a better picture of small-trader sentiment across time and product.</p><h2>Equity Option Small Trade P/C</h2><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/15159a0fd30042178e67b9adc1140c58"></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Source: </em><a href="https://datashop.cboe.com/cboe-options-open-close-volume-summary" rel="noopener noreferrer" target="_blank"><em>Cboe Open-Close Volume Summary&nbsp;</em></a></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">As we approach the 50<sup>th</sup> anniversary of listed options and Cboe, it’s a good time to reflect on how far our markets have come while acknowledging that some aspects of the business are remarkably unchanged. Focusing on the data side, exchanges and vendors are now processing over 170 billion messages per day<sup>1</sup> from 16 exchanges that list nearly 1.5 million contracts on over 6,000 stocks, ETFs and indices. In 2022, volume surpassed 10.3 billion contracts, or nearly 42 million contracts daily, a new record that is more than double 2019 levels. New technologies and business models have widened customer access to listed options, while strong growth in listings and expiration cycles have resonated with retail and institutional traders who have embraced options in their quest to efficiently adjust risk and express specific views.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Despite these changes, the need for simple and effective ways to characterize market activity and investor sentiment persists. For any area of interest, a close examination of volume, volatility and options can deliver quantitative and qualitative insights to enhance understanding and complement any approach to capital and risk management.</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">[1] https://www.opraplan.com/</p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><em>Disclaimer: There are important risks associated with transacting in any of the Cboe Company products or any digital assets discussed here. Before engaging in any transactions in those products or digital assets, it is important for market participants to carefully review the disclosures and disclaimers contained at: </em><a href="https://www.cboe.com/us_disclaimers/" rel="noopener noreferrer" target="_blank"><em>https://www.cboe.com/us_disclaimers/</em></a><em>. These products and digital assets are complex and are suitable only for sophisticated market participants. These products involve the risk of loss, which can be substantial and, depending on the type of product, can exceed the amount of money deposited in establishing the position. Market participants should put at risk only funds that they can afford to lose without affecting their lifestyle. © 2022 Cboe Exchange, Inc. All Rights Reserved</em></p><p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1"><br></p>
+        
+    </div>
+</section>
+
+
+<section class="tile tile--gray">
+    <div class="section-wrapper">
+        <h2 class="headline">Related Posts</h2>
+        <div class="insights-related  grid-row-cols--1-mobile grid-row-cols--3-tablet">
+            
+            
+                <article class="mbn insights-related-info">
+                    <a class="insights-related-info__image" href="https://www.cboe.com/insights/posts/navigating-the-complex-world-of-equity-options-data/">
+                        <figure role="presentation">
+                            <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/73b7e90609864238bdb27f3d376e3ec3" alt="" class="mbm insights-image">
+                        </figure>
+                    </a>
+                    <div class="insights-related-info__meta">
+                        
+                        <a href="https://www.cboe.com/insights/categories/info_sltns/" class="insights-related-info__category category" aria-label="View more Data and Access Solutions related articles">
+                        Data and Access Solutions
+                        </a>
+                        
+                    </div>
+                    <a class="insights-related-info__title subhead" href="https://www.cboe.com/insights/posts/navigating-the-complex-world-of-equity-options-data/">Navigating the Complex World of Equity Options Data</a>
+                    <a aria-label="Read more about Navigating the Complex World of Equity Options Data" href="https://www.cboe.com/insights/posts/navigating-the-complex-world-of-equity-options-data/" class="mbm link link--forward insights-related__read-more">Read More</a>
+                </article>
+            
+            
+            
+                <article class="mbn insights-related-info">
+                    <a class="insights-related-info__image" href="https://www.cboe.com/insights/posts/cboe-and-coinroutes-the-path-to-creating-crypto-indices/">
+                        <figure role="presentation">
+                            <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/6f93e76a858f4834ad670a1a43ba4499" alt="" class="mbm insights-image">
+                        </figure>
+                    </a>
+                    <div class="insights-related-info__meta">
+                        
+                        <a href="https://www.cboe.com/insights/categories/info_sltns/" class="insights-related-info__category category" aria-label="View more Data and Access Solutions related articles">
+                        Data and Access Solutions
+                        </a>
+                        
+                    </div>
+                    <a class="insights-related-info__title subhead" href="https://www.cboe.com/insights/posts/cboe-and-coinroutes-the-path-to-creating-crypto-indices/">Cboe and CoinRoutes: The Path to Creating Crypto Indices</a>
+                    <a aria-label="Read more about Cboe and CoinRoutes: The Path to Creating Crypto Indices" href="https://www.cboe.com/insights/posts/cboe-and-coinroutes-the-path-to-creating-crypto-indices/" class="mbm link link--forward insights-related__read-more">Read More</a>
+                </article>
+            
+            
+            
+                <article class="mbn insights-related-info">
+                    <a class="insights-related-info__image" href="https://www.cboe.com/insights/posts/dont-let-your-clients-fall-behind-with-delayed-data/">
+                        <figure role="presentation">
+                            <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/422ac3338fda451bb9159f8b4f171a22" alt="" class="mbm insights-image">
+                        </figure>
+                    </a>
+                    <div class="insights-related-info__meta">
+                        
+                        <a href="https://www.cboe.com/insights/categories/info_sltns/" class="insights-related-info__category category" aria-label="View more Data and Access Solutions related articles">
+                        Data and Access Solutions
+                        </a>
+                        
+                    </div>
+                    <a class="insights-related-info__title subhead" href="https://www.cboe.com/insights/posts/dont-let-your-clients-fall-behind-with-delayed-data/">Don’t Let your Clients Fall Behind with Delayed Data</a>
+                    <a aria-label="Read more about Don’t Let your Clients Fall Behind with Delayed Data" href="https://www.cboe.com/insights/posts/dont-let-your-clients-fall-behind-with-delayed-data/" class="mbm link link--forward insights-related__read-more">Read More</a>
+                </article>
+            
+            
+        </div>
+    </div>
+</section>
+
+
+
+
+    </main>
+
+    <footer class="site-footer ">
+    <div class="site-footer__row">
+        <div class="flex size1of1 size1080-desktop center">
+
+            <div class="site-footer__disclaimer">
+                <a class="site-footer__logo" href="https://www.cboe.com/" tabindex="1">
+                    <img class="logo--bats" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cboe_logo.svg" alt="Cboe Global Markets" height="36" width="108">
+                </a>
+                <p class="milli" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">© 2023 Cboe Exchange, Inc. All rights reserved.</p>
+            </div>
+            <div class="site-footer__nav-site">
+                <div class="site-footer__nav-vertical">
+                    <nav class="nav--footer nav--footer-vertical">
+                        <h6 class="nav--footer__heading"><a href="https://www.cboe.com/about/">Company</a></h6>
+                        <ul class="nav nav--stacked">
+                            <li><a href="https://www.cboe.com/about/">About Us</a></li>
+                            <li><a href="https://www.cboe.com/about/esg">ESG at Cboe</a></li>
+                            <li><a href="https://www.cboe.com/about/careers">Careers</a></li>
+                            <li><a href="http://ir.cboe.com/" rel="noopener noreferrer">Investor Relations</a></li>
+                            <li><a href="https://www.cboe.com/about/government-relations">Market Policy &amp; Gov. Affairs</a></li>
+                            <li><a href="https://www.cboe.com/insights/">Insights</a></li>
+                            <li><a href="https://www.cboe.com/about/hours">Hours &amp; Holidays</a></li>
+                            <li><a href="https://www.cboe.com/contact/#locations">Locations</a></li>
+                            <li><a href="https://www.cboe.com/system_status/">System Status</a></li>
+                            <li><a href="https://www.cboe.com/contact/">Contact Us</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="site-footer__nav-vertical">
+                    <nav class="nav--footer nav--footer-vertical">
+                        <h6 class="nav--footer__heading"><a href="https://www.cboe.com/services/">Services</a></h6>
+                        <ul class="nav nav--stacked">
+                            <li><a href="https://www.cboe.com/data_and_access_solutions/">Data and Access Solutions</a></li>
+                            <li><a href="https://www.cboe.com/services/#execution-services">Execution Services</a></li>
+                            <li><a href="https://www.cboe.com/services/listings/">Listings</a></li>
+                            <li><a href="https://www.cboe.com/us/equities/access_services">Access Services</a></li>
+                            <li><a href="https://www.cboe.com/services/#europe-si-services">European SI Services</a></li>
+                            <li><a href="https://www.cboe.com/services/#europe-trs-services">European Trade Reporting Services</a></li>
+                        </ul>
+                        <h6 class="nav--footer__heading"><a href="https://www.cboe.com/education/">Education</a></h6>
+                        <ul class="nav nav--stacked">
+                            <li><a href="https://www.cboe.com/about/research/">Research</a></li>
+                            <li><a href="https://www.cboermcus.com/">RMC</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="site-footer__nav-vertical">
+                    <nav class="nav--footer nav--footer-vertical">
+                        <h6 class="nav--footer__heading"><a href="https://www.cboe.com/markets/">Markets</a></h6>
+                        <ul class="nav nav--stacked">
+                            <li><a href="https://www.cboe.com/us/options/overview/">U.S. Options</a></li>
+                            <li><a href="https://www.cboe.com/us/equities/overview/">U.S. Equities</a></li>
+                            <li><a href="https://www.cboe.com/us/futures/overview/">U.S. Futures</a></li>
+                            <li><a href="https://www.cboe.com/ca/equities/">Canadian Equities</a></li>
+                            <li><a href="https://www.cboe.com/europe/derivatives/overview/">European Derivatives</a></li>
+                            <li><a href="https://www.cboe.com/europe/equities/overview/">European Equities</a></li>
+                            <li><a href="https://fx.cboe.com/">Foreign Exchange</a></li>
+                            <li><a href="https://www.cboe.com.au/">Cboe Australia</a></li>
+                            <li><a href="https://www.cboe.co.jp/en/">Cboe Japan</a></li>
+                            <li><a href="https://www.cboedigital.com/">Cboe Digital</a></li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="site-footer__nav-vertical">
+                    <nav class="nav--footer nav--footer-vertical">
+                        <h6 class="nav--footer__heading"><a href="http://ir.cboe.com/">Investor Relations</a></h6>
+                        <ul class="nav nav--stacked">
+                            <li><a href="http://ir.cboe.com/press-releases">Cboe Press Releases</a></li>
+                            <li><a href="https://www.cboe.com/investor_protection/">Investor Protection</a></li>
+                            <li><a href="https://www.cboe.com/about/esg">Corp. Responsibility</a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="site-footer__row">
+        <div class="size1080-desktop center-tablet">
+            <nav class="nav nav--wrap nav--footer site-footer__nav-legal-links">
+                <ul>
+                    <li><a href="https://www.cboe.com/accessibility/">Accessibility</a></li>
+                    <li><a href="https://www.cboe.com/use_of_content/">Use of Content</a></li>
+                    <li><a href="https://www.cboe.com/privacy">Privacy Statement</a></li>
+                    <li><a href="https://www.cboe.com/copyright/">Copyright &amp; Trademarks</a></li>
+                    <li>
+                        <a href="https://cdn.cboe.com/resources/aboutcboe/Biometric_Information_Privacy_Policy.pdf" target="_blank" rel="noopener noreferrer">
+                            Biometric Information Privacy Policy
+                        </a>
+                    </li>
+                    
+                    <li><a href="https://www.theocc.com/about/publications/publication-listing.jsp" target="_blank" rel="noopener noreferrer">OCC &amp; Investor Protection</a></li>
+
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <div class="site-footer__row">
+        <div class="flex flex--justify-between size1080-desktop center flex--align-items-center">
+            <nav class="nav nav--footer site-footer__nav-legal-links">
+                <ul>
+                    <li><a href="https://www.cboe.com/terms/">Terms &amp; Conditions</a></li>
+                </ul>
+            </nav>
+
+            <ul class="nav nav--social-media">
+                <li><a href="https://www.cboe.com/insights/rss/" target="_blank" rel="noopener">
+                    <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/SocialMediaIcons-RSS.svg" alt="Insights feed">
+                </a></li>                
+                <li><a href="http://www.twitter.com/cboe" target="_blank noreferrer" rel="noopener">
+                    <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/SocialMediaIcons-Twitter.svg" alt="Twitter feed">
+                </a></li>
+                <li><a href="https://www.youtube.com/user/cboetv" target="_blank noreferrer" rel="noopener">
+                    <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/SocialMediaIcons-YouTube.svg" alt="YouTube Channel">
+                </a></li>
+                <li><a href="http://www.facebook.com/pages/cboe-chicago-board-options-exchange/177809058917950?ref=ts" target="_blank noreferrer" rel="noopener">
+                    <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/SocialMediaIcons-Facebook.svg" alt="Facebook Page">
+                </a></li>
+                <li><a href="https://www.linkedin.com/company/cboe" target="_blank noreferrer" rel="noopener">
+                    <img src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/SocialMediaIcons-LinkedIn.svg" alt="LinkedIn Page">
+                </a></li>
+            </ul>
+        </div>
+    </div>
+    <p class="callout callout-neutral mbn text--center" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">
+        Cboe has recently updated our Privacy Notice and Policy, effective February 7, 2022.  We hope these updates make it easier for you to understand how your personal data is used and the choices and control you have over that information.
+    </p>
+</footer>
+
+
+    <div class="js-remove line-height-guide line-height-guide--12-24px"></div>
+
+
+    
+
+    <script>
+        var bats = bats || {};
+        bats.hostUrl = 'https://cdn.cboe.com';
+    </script>
+
+    <script src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/eb2fe20df57de2584d88fece9cc110cf.js.Без названия"></script>
+
+    
+
+    <script>
+        
+
+    </script>
+
+    
+    
+    
+    <script src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/cb5a9b6fab3d4e32d88e1b5ac2fb5d1d.js.Без названия"></script>
+    
+    <script>
+
+        document.addEventListener('DOMContentLoaded', (event) => {
+            var privacyConsent = new bats.PrivacyConsent({
+                cookieObj: {
+                    name: 'CboePrivacyPolicy_20211104',
+                    value: '1'
+                }
+            });
+            bats.hostUrl = 'https://cdn.cboe.com';
+            bats.fullWidth = 'false' || false;
+
+            /* ASSIGN CLICKS TO MOBILE AND VERTICAL NAVIGATION */
+
+            //apply onclick to all submenu containing divs
+            var menuArrows = document.getElementsByClassName("menu-arrow");
+            for (var i = 0; i < menuArrows.length; ++i) {
+                menuArrows[i].addEventListener('click', openSubmenu);
+            }
+        });
+    </script>
+
+    
+    <script src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/E-v1.js.Без названия" async=""></script>
+    <script src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/c4ed07ccfe1ba568dac14e9d9b26e400.js.Без названия"></script>
+
+
+
+
+<div class="size1080--min size1of1 noPrint privacy-alert" id="privacy-alert"><div class="box box--pad">   <div class="size-sm-1of1 size-md-960 size-md-1080 size1080-tablet--max privacy-alert__basic">       <p class="mbn" data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Cboe believes it is important for you to know how we use cookies and process any other personal data you may disclose to Cboe.</p>       <div class="privacy-alert__button-group">           <button class="button--text privacy-alert__read-button">Read less</button>           <button class="button--solid privacy-alert__agree-button">I agree</button>       </div>   </div></div><div class="box box--pad" id="privacy-alert-toggle">   <div class="size-sm-1of1 size-md-960 size-md-1080 size1080-tablet--max privacy-alert__extra">       <p data-gtm-vis-has-fired-1498128_345="1" data-gtm-vis-has-fired-1498128_353="1" data-gtm-vis-has-fired-1498128_923="1">Please review the <a href="https://www.cboe.com/terms">Terms and Conditions for Use of Cboe Websites</a>, which contain important risk disclosures and disclaimers of liability. Please also carefully review <a href="https://www.cboe.com/privacy">Cboe’s Privacy Notice and Policy</a> for important information on Cboe’s use of cookies and personal data you may disclose to Cboe. By continuing to use Cboe websites, or by clicking “I agree,” you acknowledge that you have read and accept both the <a href="https://www.cboe.com/terms">Terms and Conditions for Use of Cboe Websites</a> and <a href="https://www.cboe.com/privacy">Cboe’s Privacy Notice and Policy</a> and that you consent to the use of cookies.</p>   </div></div></div><iframe height="0" width="0" style="display: none; visibility: hidden;" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/activityi.html"></iframe><style id="wistia_22_style" type="text/css" class="wistia_injected_style">
+@font-face {
+font-family: 'WistiaPlayerInterNumbersSemiBold';
+font-feature-settings: 'tnum' 1;
+src: url(data:application/x-font-woff;charset=utf-8;base64,d09GMk9UVE8AAAaMAAwAAAAACgAAAAZBAAMD1wAAAAAAAAAAAAAAAAAAAAAAAAAADYpwGhQbIBwqBmAAgTIBNgIkAzAEBgWDGgcgGykJEZWkARP8KHCbm2tEznyIN98tPTUk9Ig3oiVV3pbDIzXa+f/fZgXpALFTZhBoMVFC9cp036dXvRKVmVnsxe+D+1NDQI5lG7ikZWEINIElTeBIdnxlhauQ5GQtoLHA/wN0riVdSx5xgbxF3KTbgnjVQ4B9P7YqCx7FpEZK+6ilx0AoopUh4aExJEKmkU+0ncdr4iFfKhdSFD9y91LCRaxNbVqvi0dND3rxI7ndUDR7EiwT3bhiua9krFA0oepCy2hCjwmjnjDjKjNTDz2ZuHtN8820Wfw/l8u4w4yV/f8/6uscs5rmiN00LcP4hAofyZUSyS3WinX0RGFFtnGrjj36x6dlNa57+PLTlrUisH2n9orfgd+R34XfDd0NsWDXwfwhvKHpbs3UBni37dBlPvO4KYn/PgylilcgSdw6sjsSSxsRGfIJgqhi14bKZCHcQvjUh/+3HMotTYrGLVYCxyMFjEnYC98yTAp6atAKVxaZ9eu2NMji8WTj4w/Y34elD60PPwb5bEywLqAX/amwmUo6TBCy14N/TL44jb3sE5JdUIPXXI0RBSoGt3BUObn4agKGIxxQhlyQacbstK4fS2mZoBtFNQ1bd+4zND2vQu6anl7gWFOj8MV2DVMtU44xMhpwElrrjA7zO5IqWojd/v1Vso6cqp91zC2YrGhDOy07Iqyza2q9smDIwUYek0AWbCt/8x78QmrzayQ6xtpmqfCYsLfgU9HdeP3UqutZTTNd/9Q8k08XzXzIxSdvLPda8YaeeZnkxUwql0nDKyUYdaWZjGAy7UDLHpVqBVHTxSV0wBy21El9u/491ik2J3YkdiP2LPZL41RBeeNUWtp97Bbn0Ee1g9wr9qqV/X+4R9nlPX03743dylnaXZyNp8v58yLOsFYCbUnCVQzjN+5QhlmKccO7aMkueWJggROd4qnw2x5LydUcg/NRamE3XMlkGovpRWPKWEavP74P2O1RANM/3gIIPJj7TX+lqU2geQuaBx4B/7cWAOx0ucTiEHYJU9y5DBuUMYNIHeHZz9tn+Fw2G5EBTqUlHRfRi4eB5wNlJsRsv5k4b6HyFkhIC6BO4LzPbWhW7rbCcxubeKHOc6UaBKZBMMd4j8XuRUynOCCa4EMfF9grkI1NcTaSAVtk1nrIOwFfeEBlQw4f4phb6zHzBOm0ZZ0dBcaZRVdYIo5xYiyOMEWONwQHmjKGE//VuRBgul1QrpyxmMvF4vGj0xfuuQrNt4tVTsRhEnjY9AuKa1FVLSEneQWzFd5WbO7hasX08ONUOVQgwQuVqACFXkSoIoUgK1hJEkAgbkG5CjqBS5wrRFuY2IfVwhRnLsVyZTZpatveGR4yEbYqbE6J80nM4aa+LD7Oqmr8PdSJFUQVynmgN4lerGQV1+uLdYzdOFWHPW/iK2gIQayhizQ0NMwyvBEBlrDczRfmU40CTtAHqLQGnjQG8MYkxm1MwJuTqjHwVCu9iRJ1C8ojWGHxUYowH0c5X57zpXquvlw0wzHHGMTfufxiJ1psFJTzq6nGeDvHF4LgmHHWCUViZBaInRn+cswnBi460RBPRYg9TRUQ0CZUC5LAT0qLLu50FpdTeBhjGf7/h4dg9hE0uqsBx/saOcYRDIfnOhfzGFBHyizcJK3p2edUjWrC0rn1aGjXtfVUCHMAKKhlxV8eTEIcV2jCOdKiqahv/MisrfRQVnxPJoOU62mR6pu2ZllIzo8zOZqQB7kWJXW2/c0aihata5PcIVJKfFRgHAETmEQVTCELptGMGcyigTnMJ1voUVN6uCZS9pV2hrwl7FYMvBwtUSd7L7E5qP9t7BIPRF7EcmA9ct2nIPHrxgWajtDltbXuBLuaY6qRZGa5ZlX5anfR0lYXaHUzVSFjZa8rfdhZ8rKXFZg21LVL5LFjI5TlDIbwnFGHE2dypHs6Q50N015dpOgLONEUlOqoiQgIaeCsjMq9gITDKwRMieQgKUy9UQY1BTFYZU2KpE2SkILMIjW8IdFwIKmMaK8oClJVssAEtFnz5dQ1s+w6EZoNGtPGQfzx+aoE8ikiP8GCYOWtgB+HBdWDaxACAZInVq14dZI85RRDvZGIghyONw59KV/BBEQ02P1ER8hmNGiURT2hQP8WfAY=);
+}
+</style><script type="text/javascript" id="">var onWindow=function(b,a){"undefined"!==typeof window.addEventListener?window.addEventListener(b,a,!1):window.attachEvent("on"+b,function(){a.call(window)})},onWindowLeave=function(b){onWindow("mouseout",function(a){a=a?a:window.event;(a=a.relatedTarget||a.toElement)&&"HTML"!==a.nodeName||"function"===typeof b&&b()})};onWindowLeave(function(){dataLayer.push({event:"exit_intent"})});</script>
+<script type="text/javascript" id="">piAId="78532";piCId="1226";piHostname="pi.pardot.com";(function(){function b(){var a=document.createElement("script");a.type="text/javascript";a.src=("https:"==document.location.protocol?"https://pi":"http://cdn")+".pardot.com/pd.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)}window.attachEvent?window.attachEvent("onload",b):window.addEventListener("load",b,!1)})();</script>
+<script type="text/javascript" id="">piAId="124862";piCId="85474";piHostname="pi.pardot.com";(function(){function b(){var a=document.createElement("script");a.type="text/javascript";a.src=("https:"==document.location.protocol?"https://pi":"http://cdn")+".pardot.com/pd.js";var c=document.getElementsByTagName("script")[0];c.parentNode.insertBefore(a,c)}window.attachEvent?window.attachEvent("onload",b):window.addEventListener("load",b,!1)})();</script><script type="text/javascript" id="">(function(a,b){var d="pdst-capture",e="script";if(!b.getElementById(d)){a.pdst=a.pdst||function(){(a.pdst.q=a.pdst.q||[]).push(arguments)};var c=b.createElement(e);c.id=d;c.async=1;c.src="https://cdn.pdst.fm/ping.min.js";b=b.getElementsByTagName(e)[0];b.parentNode.insertBefore(c,b)}a.pdst("conf",{key:"d707ef7258404e0f895062abb60a636a"});a.pdst("view")})(window,document);</script><script type="text/javascript" id="">(function(a,b,c,d,e){a=b.createElement(c);b=b.getElementsByTagName(c)[0];a.async=1;a.id=e;a.src=d;b.parentNode.insertBefore(a,b)})(window,document,"script","https://tag.demandbase.com/1bC4B2mo.min.js","demandbase_js_lib");</script><img style="display:none" alt="" aria-hidden="true" width="0" height="0" id="db_bw_pixel_ad" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/demandbase"><img style="display:none" alt="" aria-hidden="true" width="0" height="0" id="db_lr_pixel_ad" src="./How Early Exercise Order Flow Impacts Equity Option Put_Call Ratios_files/464526.gif"></body></html>
